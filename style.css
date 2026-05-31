@@ -14,6 +14,23 @@ html {
     scroll-margin-top: 12vh;
 }
 
+#skill {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(from var(--bg-sec-color) r g b / 60%);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: fit-content;
+    border-radius: 1pc;
+    gap: 20px;
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         --bg-color: rgb(241, 241, 241);
@@ -318,6 +335,93 @@ nav {
     gap: 10px;
 }
 
+.container-benefit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 30px;
+}
+
+.benefits {
+    flex-wrap: wrap;
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(from var(--bg-sec-color) r g b / 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit-logo {
+    background-color: var(--bg-third-color);
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+    line-height: 1.7;
+    color: var(--primary-color);
+    border-radius: 20%;
+    aspect-ratio: 1/1;
+}
+
+.benefit-judul {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.benefit-isi {
+    flex-wrap: wrap;
+    display: flex;
+    line-height: 1.5;
+}
+
+.benefit-deskripsi {
+    color: var(--grey);
+    margin: 0;
+    text-align: left;
+    font-size: 19px;
+}
+
+.link-service {
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--bg-sec-color);
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.link-service:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.skill-con {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .badge {
     flex-wrap: wrap;
     gap: 10px;
@@ -405,7 +509,7 @@ nav {
     width: fit-content;
     color: white;
     font-weight: 500;
-    border-radius: 1pc;
+    border-radius: 10px;
     text-decoration: none;
     border: 2px solid transparent;
     transition: 0.3s;
@@ -455,6 +559,9 @@ nav {
 }
 
 @media (max-width: 630px) {
+    nav {
+        justify-content: space-between;
+    }
     footer {
         font-size: 13px;
     }
