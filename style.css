@@ -10,8 +10,12 @@ html {
     scroll-behavior: smooth;
 }
 
-#home, #skill, #projects, #contacts {
+#home, #skill, #services, #projects, #contacts {
     scroll-margin-top: 12vh;
+}
+
+#services {
+    padding: 0;
 }
 
 #skill {
@@ -20,9 +24,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(from var(--bg-sec-color) r g b / 60%);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    background-color: rgba(from var(--bg-sec-color) r g b / 30%);
     padding: 30px;
     margin: 0 auto;
     margin-top: 50px;
