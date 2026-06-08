@@ -14,6 +14,12 @@ html {
     scroll-margin-top: 12vh;
 }
 
+#home {
+    background-color: var(--bg-third-color);
+    border-bottom-left-radius: 70% 20px;
+    border-bottom-right-radius: 70% 20px;
+}
+
 #services {
     padding: 0;
 }
@@ -60,7 +66,7 @@ body {
     background-color: var(--bg-color);
     position: relative;
     overflow-x: hidden;
-    font-family: 'Google Sans';
+    font-family: 'Google Sans', sans-serif;
 }
 
 .section-title {
@@ -82,6 +88,7 @@ body {
 }
 
 .shape {
+    opacity: 80%;
     position: absolute;
     background-color: var(--bg-sec-color);
     animation: floatAndRotate 20s infinite linear;
@@ -177,7 +184,6 @@ nav .nav-name, nav .navs, nav a{
 
 nav {
     padding: 0 50px 0 50px;
-    border-radius: 1pc;
     top: 0%;
     right: 0;
     left: 0;
@@ -201,7 +207,7 @@ nav {
 }
 
 .navs {
-    gap: 20px;
+    gap: 30px;
     display: flex;
     flex-direction: row;
 }
@@ -215,6 +221,7 @@ nav {
     color: var(--primary-color);
     text-decoration: none;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 .navs li a:hover {
@@ -308,12 +315,13 @@ nav {
 }
 
 .container {
+    padding: 100px 100px 0px 100px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row-reverse;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -326,11 +334,10 @@ nav {
 }
 
 .content {
-    padding: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex: 1 1 0; 
+    flex: 1; 
     min-width: 250px;
     text-align: left;
     justify-content: center;
@@ -501,26 +508,26 @@ nav {
 }
 
 .content h1 {
-    font-size: 40px;
+    font-size: 70px;
 }
 
 .cta-container a {
-    background-color: var(--blue);
-    padding: 15px 30px;
+    background-color: var(--bg-sec-color);
+    padding: 10px;
     display: block;
     width: fit-content;
-    color: white;
+    color: var(--primary-color);
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
     border: 2px solid transparent;
     transition: 0.3s;
+    font-size: 25px;
 }
 
 .cta-container a:hover {
     background-color: var(--primary-color);
-    color: var(--blue);
-    box-shadow: 1px 1px 15px 1px var(--primary-color);
+    color: var(--bg-third-color);
 }
 
 .content h3 {
@@ -535,12 +542,76 @@ nav {
     color: var(--grey);
 }
 
-.profile-img {
-    border-radius: 40%;
-    width: 80%;
-    object-fit: cover;
+#typewriter {
+    background-image: linear-gradient(to right top, #3f79d0, #5097df, #6eb3ea, #93cff4, #bdeaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 20px;
+    justify-self: flex-start;
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+#typewriter::after {
+    content: "|";
+    animation: blink 0.7s step-end infinite;
+    background-image: linear-gradient(to right top, #3f79d0, #5097df, #6eb3ea, #93cff4, #bdeaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#main-img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    filter: contrast(110%) saturate(110%) brightness(110%);
+    object-fit: contain;
     aspect-ratio: 1/1;
     pointer-events: none;
+}
+
+.thumbnails {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+}
+
+
+@keyframes upAndDown {
+    0% {
+        transform: translate(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .cta-container {
@@ -561,6 +632,18 @@ nav {
 }
 
 @media (max-width: 630px) {
+    #main-img {
+        width: 80%;
+        order: 1;
+    }
+    .thumbnails {
+        flex-direction: row;
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+    }
     nav {
         justify-content: space-between;
     }
@@ -569,6 +652,7 @@ nav {
     }
     .container {
         flex-direction: column;
+        padding: 40px;
     }
 
     .profile-img {
