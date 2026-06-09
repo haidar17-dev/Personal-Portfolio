@@ -313,7 +313,7 @@ nav {
 }
 
 .container {
-    padding: 100px 100px 0px 100px;
+    padding: 105px 50px 0px 70px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -321,6 +321,7 @@ nav {
     margin: 0 auto;
     width: 100%;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .container h2{
@@ -331,6 +332,16 @@ nav {
     color: var(--blue);
 }
 
+.avai-con {
+    display: flex;
+    background-color: var(--bg-sec-color);
+    color: var(--primary-color);
+    width: fit-content;
+    padding: 10px 10px 10px 5px;
+    border-radius: 1pc;
+    flex-wrap: wrap;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -338,8 +349,7 @@ nav {
     flex: 1; 
     min-width: 250px;
     text-align: left;
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start;
 }
 
 .container-benefit {
