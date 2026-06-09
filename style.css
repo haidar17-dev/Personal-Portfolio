@@ -279,10 +279,8 @@ nav {
   background: rgba(from var(--bg-sec-color) r g b / 40%);
 }
 
-/* Mobile breakpoint */
 @media (max-width: 768px) {
-  .navs,
-  .btn {
+  .navs, .btn {
     display: none; /* sembunyikan nav & tombol desktop */
   }
   .hamburger-btn {
@@ -633,7 +631,8 @@ nav {
 
 @media (max-width: 630px) {
     #main-img {
-        width: 80%;
+        border-radius: 40%;
+        width: 100%;
         order: 1;
     }
     .thumbnails {
