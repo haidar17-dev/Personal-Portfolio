@@ -88,7 +88,7 @@ body {
 }
 
 .shape {
-    opacity: 80%;
+    opacity: 15%;
     position: absolute;
     background-color: var(--bg-sec-color);
     animation: floatAndRotate 20s infinite linear;
@@ -182,7 +182,7 @@ nav .nav-name, nav .navs, nav a{
     padding: 15px 0 15px 0;
 }
 
-nav {
+.navbar {
     padding: 0 50px 0 50px;
     top: 0%;
     right: 0;
@@ -198,6 +198,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    transition: all 0.5s ease;
 }
 
 .nav-name a {
@@ -313,7 +314,7 @@ nav {
 }
 
 .container {
-    padding: 105px 50px 0px 70px;
+    padding: 30px 50px 0px 100px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -343,6 +344,7 @@ nav {
 }
 
 .content {
+    gap: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -516,26 +518,28 @@ nav {
 }
 
 .content h1 {
-    font-size: 70px;
+    font-size: 60px;
+    line-height: 1.11;
 }
 
 .cta-container a {
     background-color: var(--bg-sec-color);
-    padding: 10px;
-    display: block;
+    display: inline-block;
     width: fit-content;
     color: var(--primary-color);
     font-weight: 500;
     border-radius: 8px;
     text-decoration: none;
-    border: 2px solid transparent;
     transition: 0.3s;
-    font-size: 25px;
+    font-size: 30px;
+    border-radius: 16px;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
 .cta-container a:hover {
-    background-color: var(--primary-color);
     color: var(--bg-third-color);
+    background-color: var(--primary-color);
 }
 
 .content h3 {
@@ -583,7 +587,7 @@ nav {
 
 #main-img {
     transition: opacity 0.3s ease, transform 0.3s ease;
-    width: 100%;
+    width: 120%;
     filter: contrast(110%) saturate(110%) brightness(110%);
     object-fit: contain;
     aspect-ratio: 1/1;
@@ -820,6 +824,8 @@ nav {
 }
 
 .contact-container {
+    border-top-left-radius: 60% 30px;
+    border-top-right-radius: 60% 30px;
     margin-top: 100px;
     background-color: rgba(from var(--bg-sec-color) r g b / 60%);
     backdrop-filter: blur(100px);

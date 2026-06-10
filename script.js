@@ -4,6 +4,20 @@ AOS.init({
   duration: 400
 });
 
+const navbar = document.getElementById('navs');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    navbar.style.backgroundColor = 'rgba(from var(--bg-sec-color) r g b / 60%)';
+    navbar.style.backdropFilter = 'blur(10px)';
+    navbar.style.webkitBackdropFilter = 'blur(10px)';
+  } else {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'blur(0px)';
+    navbar.style.webkitBackdropFilter = 'blur(0px)';
+  }
+});
+
 const btn = document.getElementById('hamburgerBtn');
 const menu = document.getElementById('mobileMenu');
 
