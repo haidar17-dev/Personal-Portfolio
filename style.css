@@ -45,7 +45,7 @@ html {
         --bg-sec-color: rgb(250, 250, 250);
         --bg-third-color: rgb(255, 255, 255);
         --primary-color: rgb(26, 48, 90);
-        --blue: rgb(0, 109, 198);
+        --blue: rgb(255, 196, 0);
         --grey: rgb(88, 88, 88);
     }
 }
@@ -55,8 +55,8 @@ html {
         --bg-color: rgb(9, 15, 25);
         --bg-sec-color: rgb(15, 25, 42);
         --bg-third-color: rgb(21, 36, 61);
-        --primary-color: rgb(255, 255, 255);
-        --blue: rgb(0, 140, 255);
+        --primary-color: rgb(255, 235, 85);
+        --blue: rgb(255, 255, 255);
         --grey: rgb(149, 149, 149);
     }
 }
@@ -336,7 +336,7 @@ nav .nav-name, nav .navs, nav a{
 .avai-con {
     display: flex;
     background-color: var(--bg-sec-color);
-    color: var(--primary-color);
+    color: var(--grey);
     width: fit-content;
     padding: 10px 10px 10px 5px;
     border-radius: 1pc;
@@ -508,9 +508,7 @@ nav .nav-name, nav .navs, nav a{
     font-size: 20px;
 }
 
-.content span {
-    color: var(--blue);
-} 
+
 
 .content h1, .content h3 {
     color: var(--primary-color);
@@ -555,21 +553,15 @@ nav .nav-name, nav .navs, nav a{
 }
 
 #typewriter {
-    background-image: linear-gradient(to right top, #3f79d0, #5097df, #6eb3ea, #93cff4, #bdeaff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    padding: 20px;
-    justify-self: flex-start;
-    font-size: 80px;
-    line-height: 1;
     font-weight: 500;
+    color: var(--blue);
+    font-size: 44px;
 }
 
 #typewriter::after {
     content: "|";
     animation: blink 0.7s step-end infinite;
-    background-image: linear-gradient(to right top, #3f79d0, #5097df, #6eb3ea, #93cff4, #bdeaff);
+    background: var(--blue);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

@@ -25,6 +25,7 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('open');
 });
 
+// Change Hero's image
 
 function changeImg(thumb) {
   const main = document.getElementById('main-img');
@@ -36,3 +37,35 @@ function changeImg(thumb) {
     main.style.transform = 'scale(1)';
   }, 300);
 }
+
+// Typewriter
+
+const texts = ["Junior Web Developer", "High School Student"];
+const speed = 100;
+let textIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+    if (charIndex < texts[textIndex].length) {
+        document.getElementById("typewriter").textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, speed);
+    } else {
+        setTimeout(eraseText, 2000);
+    }
+}
+
+function eraseText() {
+    if (charIndex > 0) {
+        const currentText = texts[textIndex].substring(0, charIndex - 1);
+        document.getElementById("typewriter").textContent = currentText;
+        charIndex--;
+        setTimeout(eraseText, speed / 1); 
+    } else {
+        textIndex++;
+        if (textIndex >= texts.length) textIndex = 0;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
